@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jie Wei, Ph.D. student at SUSTech, supervised by Yong Hu. Research on rational and integral points, Brauer-Manin obstructions, and arithmetic of curve function fields over DVRs.">
+  <meta name="theme-color" content="#142951">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jie Wei | Arithmetic &amp; Algebraic Geometry">
+  <meta property="og:description" content="Research, writing, education, and teaching in arithmetic and algebraic geometry.">
+  <link rel="canonical" href="https://enenbuzhidaoe.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23142951'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='32' fill='white'%3EJW%3C/text%3E%3C/svg%3E">
+  <title>Jie Wei | Arithmetic &amp; Algebraic Geometry</title>
+  <style>
+    :root { --navy: #142951; --blue: #2155c7; --ink: #172438; --muted: #53627a; --line: #dbe2ec; --paper: #fff; --tint: #f2f5fb; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 1rem; line-height: 1.7; }
+    a { color: var(--blue); text-underline-offset: .22em; text-decoration-thickness: .07em; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; border-radius: 2px; }
+    .sidebar a:focus-visible, .contact-panel a:focus-visible { outline-color: #729dff; }
+    .skip { position: fixed; z-index: 10; left: 1rem; top: -5rem; padding: .65rem 1rem; color: white; background: var(--navy); }
+    .skip:focus { top: 1rem; }
+    .shell { max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: 286px minmax(0, 1fr); }
+    .sidebar { background: var(--navy); color: #fff; min-height: 100vh; padding: 3.4rem 2.15rem; }
+    .sidebar-inner { position: sticky; top: 3.4rem; }
+    .monogram { font-family: Georgia, "Times New Roman", serif; font-size: 2rem; letter-spacing: -.04em; width: 3.5rem; height: 3.5rem; border: 1px solid #8496b8; display: grid; place-items: center; margin-bottom: 2.2rem; }
+    .identity { font-family: Georgia, "Times New Roman", serif; font-size: 1.75rem; line-height: 1.3; margin: 0; }
+    .sidebar-role { color: #d3dff5; margin: .4rem 0 0; font-size: .95rem; }
+    .sidebar-field { color: #d3dff5; margin: 1.3rem 0 2.4rem; font-size: .95rem; line-height: 1.65; }
+    nav { display: grid; gap: .35rem; }
+    nav a { display: block; color: #e8efff; padding: .42rem 0; text-decoration: none; font-size: .95rem; }
+    nav a:hover { color: white; }
+    .sidebar-contact { border-top: 1px solid #405779; margin-top: 2.5rem; padding-top: 1.3rem; }
+    .sidebar-contact a { color: #e8efff; font-size: .875rem; text-decoration: none; overflow-wrap: anywhere; }
+    .sidebar-contact p { margin: .3rem 0; }
+    main { min-width: 0; padding: 4.1rem 4.4rem 2rem; }
+    .eyebrow { font-size: .875rem; font-weight: 650; letter-spacing: .11em; text-transform: uppercase; color: var(--blue); margin: 0 0 .9rem; }
+    h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(3rem, 5.5vw, 4.65rem); letter-spacing: -.045em; line-height: 1.08; margin: 0 0 1.1rem; }
+    .field { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.3rem, 2.2vw, 1.6rem); line-height: 1.4; color: var(--muted); margin: 0 0 1.6rem; }
+    .intro { font-size: 1.12rem; line-height: 1.8; max-width: 42rem; margin: 0 0 1.6rem; }
+    .hero-links { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-bottom: 2.9rem; }
+    .hero-links a { font-size: .95rem; font-weight: 600; }
+    .hero-rule { height: 5px; width: 4rem; background: var(--blue); }
+    section { padding: 2.65rem 0; border-bottom: 1px solid var(--line); }
+    .section-head { display: flex; gap: .8rem; align-items: baseline; margin-bottom: 1.6rem; }
+    .section-number { color: var(--blue); font-size: .8rem; font-weight: 650; letter-spacing: .04em; }
+    h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.85rem; font-weight: 400; letter-spacing: -.025em; line-height: 1.3; margin: 0; }
+    h3 { font-size: 1.02rem; line-height: 1.55; font-weight: 650; margin: 0 0 .35rem; }
+    p { margin-top: 0; }
+    .topics { list-style: none; padding: 0; margin: 0; }
+    .topics li { padding: .8rem 0 .8rem 1.1rem; position: relative; border-bottom: 1px solid #edf0f5; }
+    .topics li:last-child { border: 0; }
+    .topics li::before { content: ""; position: absolute; left: 0; top: 1.53rem; width: 4px; height: 4px; background: var(--blue); }
+    .topics strong { font-weight: 600; }
+    .topics span { color: var(--muted); }
+    .writing { display: grid; gap: 0; }
+    .work { display: grid; grid-template-columns: 7.8rem minmax(0, 1fr); gap: 1.1rem; padding: 1.15rem 0; border-top: 1px solid var(--line); }
+    .work:first-child { padding-top: 0; border: 0; }
+    .work-type { color: var(--muted); font-size: .875rem; line-height: 1.6; }
+    .work p { color: var(--muted); font-size: .95rem; margin: .35rem 0 0; }
+    .paper-title { font-family: Georgia, "Times New Roman", serif; font-size: 1.13rem; font-weight: 400; line-height: 1.5; }
+    .timeline { display: grid; gap: 1.5rem; }
+    .timeline-entry { display: grid; grid-template-columns: 7.8rem minmax(0, 1fr); gap: 1.1rem; }
+    .date { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; line-height: 1.65; }
+    .timeline-entry p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+    .detail-note { font-size: .875rem; color: var(--muted); margin: 1.25rem 0 0; }
+    .teaching { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; }
+    .teaching article { border-left: 3px solid var(--blue); padding-left: 1rem; }
+    .teaching p { color: var(--muted); font-size: .95rem; margin: .3rem 0 0; }
+    .activity-list { list-style: none; padding: 0; margin: 0; }
+    .activity-list li { display: grid; grid-template-columns: 7.8rem minmax(0, 1fr); gap: 1.1rem; padding: .85rem 0; border-top: 1px solid #edf0f5; }
+    .activity-list li:first-child { padding-top: 0; border: 0; }
+    .activity-list p { margin: .2rem 0 0; color: var(--muted); font-size: .95rem; }
+    details { margin-top: 1rem; }
+    summary { cursor: pointer; color: var(--blue); font-size: .95rem; font-weight: 600; padding: .5rem 0; }
+    details .activity-list { margin-top: 1rem; }
+    .awards { display: grid; gap: .7rem; list-style: none; padding: 0; margin: 0; }
+    .awards li { display: flex; align-items: baseline; gap: 1.1rem; }
+    .awards .date { min-width: 3rem; }
+    .beyond { background: var(--tint); padding: 1.1rem 1.3rem; margin-top: 1.6rem; }
+    .beyond p { margin: 0; font-size: .95rem; color: var(--muted); }
+    .contact-panel { background: var(--navy); color: white; padding: 1.8rem 2rem; margin: 2.5rem 0 1.5rem; }
+    .contact-panel h2 { font-size: 1.6rem; margin-bottom: .7rem; }
+    .contact-panel p { color: #d3dff5; margin-bottom: .7rem; }
+    .contact-panel a { color: white; overflow-wrap: anywhere; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem; color: var(--muted); font-size: .8rem; padding: .8rem 0; }
+    footer p { margin: 0; }
+    @media (min-width: 1360px) { .shell { border-left: 1px solid var(--line); border-right: 1px solid var(--line); } }
+    @media (max-width: 1080px) { .shell { grid-template-columns: 250px minmax(0, 1fr); } .sidebar { padding: 2.8rem 1.7rem; } main { padding: 3.4rem 2.6rem 1.5rem; } }
+    @media (max-width: 780px) {
+      html { scroll-padding-top: 1rem; }
+      .shell { display: block; }
+      .sidebar { min-height: auto; padding: 1.25rem 1.5rem; }
+      .sidebar-inner { position: static; }
+      .monogram, .sidebar-role, .sidebar-field, .sidebar-contact { display: none; }
+      .identity { font-size: 1.35rem; margin-bottom: .65rem; }
+      nav { display: flex; flex-wrap: wrap; gap: .1rem 1.1rem; }
+      nav a { padding: .35rem 0; font-size: .875rem; }
+      main { padding: 2.65rem 1.5rem 1rem; }
+      h1 { font-size: 3.45rem; }
+      .intro { font-size: 1.05rem; }
+      section { padding: 2.25rem 0; }
+      .work, .timeline-entry, .activity-list li { grid-template-columns: 6.2rem minmax(0, 1fr); gap: .8rem; }
+    }
+    @media (max-width: 430px) {
+      main { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .sidebar { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .work, .timeline-entry, .activity-list li { display: block; }
+      .work-type, .timeline-entry > .date, .activity-list li > .date { display: block; margin-bottom: .5rem; }
+      .teaching { grid-template-columns: 1fr; gap: 1.5rem; }
+      .contact-panel { padding: 1.5rem 1.2rem; }
+      h2 { font-size: 1.65rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { font-size: 10pt; line-height: 1.45; }
+      .shell { display: block; }
+      .sidebar, .skip, .hero-links, .hero-rule { display: none; }
+      main { padding: 0; }
+      h1 { font-size: 32pt; }
+      h2 { font-size: 18pt; }
+      section { padding: 1rem 0; }
+      .work, .timeline-entry, .activity-list li, .teaching article { break-inside: avoid; }
+      .contact-panel { background: white; color: var(--ink); border: 1px solid var(--line); padding: 1rem; }
+      .contact-panel a, .contact-panel p { color: var(--ink); }
+      details { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Profile and navigation">
+      <div class="sidebar-inner">
+        <div class="monogram" aria-hidden="true">JW</div>
+        <p class="identity">Jie Wei</p>
+        <p class="sidebar-role">Ph.D. student in mathematics</p>
+        <p class="sidebar-field">Department of Mathematics<br>Southern University of<br>Science and Technology</p>
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#research">Research interests</a>
+          <a href="#writing">Research &amp; writing</a>
+          <a href="#education">Education</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#activities">Academic activities</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="sidebar-contact">
+          <p><a href="mailto:12432029@mail.sustech.edu.cn">12432029@mail.sustech.edu.cn</a></p>
+          <p><a href="https://github.com/enenbuzhidaoe">GitHub · enenbuzhidaoe</a></p>
+        </div>
+      </div>
+    </aside>
+    <main id="main">
+      <header id="about">
+        <p class="eyebrow">Ph.D. student in mathematics</p>
+        <h1>Jie Wei</h1>
+        <p class="field">Arithmetic geometry &amp; algebraic geometry</p>
+        <p class="intro">I am a Ph.D. student in the Department of Mathematics at Southern University of Science and Technology (SUSTech), supervised by Prof. Yong Hu. I study rational and integral points and their Brauer–Manin obstructions, as well as the arithmetic of function fields of curves over discrete valuation rings.</p>
+        <div class="hero-links">
+          <a href="mailto:12432029@mail.sustech.edu.cn">Email me</a>
+          <a href="#writing">Research &amp; writing</a>
+          <a href="#education">Academic background</a>
+        </div>
+        <div class="hero-rule" aria-hidden="true"></div>
+      </header>
+      <section id="research" aria-labelledby="research-title">
+        <div class="section-head"><span class="section-number" aria-hidden="true">01</span><h2 id="research-title">Research interests</h2></div>
+        <ul class="topics">
+          <li><strong>Rational and integral points.</strong> <span>Existence, approximation, and Brauer–Manin obstructions in arithmetic geometry.</span></li>
+          <li><strong>Arithmetic over discrete valuation rings.</strong> <span>Arithmetic of function fields of curves over DVRs.</span></li>
+          <li><strong>Local-global principles.</strong> <span>Descent obstructions and related questions for algebraic varieties.</span></li>
+          <li><strong>Rationality and moduli.</strong> <span>Rationality of algebraic varieties, moduli, and deformation theory.</span></li>
+          <li><strong>Arithmetic models and birational geometry.</strong> <span>Models of algebraic varieties and their applications in arithmetic.</span></li>
+          <li><strong>Quadratic forms and algebraic groups.</strong> <span>Arithmetic of quadratic forms and Galois cohomology of linear algebraic groups.</span></li>
+        </ul>
+      </section>
+      <section id="writing" aria-labelledby="writing-title">
+        <div class="section-head"><span class="section-number" aria-hidden="true">02</span><h2 id="writing-title">Research &amp; writing</h2></div>
+        <div class="writing">
+          <article class="work"><div class="work-type">Master's research</div><div><h3 class="paper-title">Very strong approximation for certain varieties</h3><p>Master's thesis project · Southern University of Science and Technology.</p></div></article>
+          <article class="work"><div class="work-type">Reading notes</div><div><h3 class="paper-title">A note on the Harari–Voloch conjecture and arithmetic properties of Châtelet surfaces</h3></div></article>
+          <article class="work"><div class="work-type">Seminar talks<br>2025</div><div><h3 class="paper-title">Rational points and arithmetic models of algebraic varieties</h3><p>Southern University of Science and Technology.</p></div></article>
+          <article class="work"><div class="work-type">Undergraduate thesis<br>2024</div><div><h3 class="paper-title"><a href="https://williamjayed.github.io/%E7%B4%A7%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA(%E8%AE%BA%E6%96%87).pdf">Representations of compact groups</a></h3><p>Southwest Jiaotong University. Supervised by Zhongwei Yang.</p></div></article>
+        </div>
+      </section>
+      <section id="education" aria-labelledby="education-title">
+        <div class="section-head"><span class="section-number" aria-hidden="true">03</span><h2 id="education-title">Education</h2></div>
+        <div class="timeline">
+          <article class="timeline-entry"><div class="date">Current</div><div><h3>Southern University of Science and Technology</h3><p>Ph.D. studies · Department of Mathematics</p><p>Supervisor: Prof. Yong Hu</p></div></article>
+          <article class="timeline-entry"><div class="date">Sep. 2024–<br>Jun. 2026*</div><div><h3>Southern University of Science and Technology</h3><p>Master's studies · Department of Mathematics</p><p>Supervisor: Yong Hu</p></div></article>
+          <article class="timeline-entry"><div class="date">Sep. 2020–<br>Jun. 2024</div><div><h3>Southwest Jiaotong University</h3><p>Bachelor of Science · School of Mathematics</p><p>Supervisor: Zhongwei Yang</p></div></article>
+        </div>
+        <p class="detail-note">* Expected completion date recorded in my CV.</p>
+      </section>
+      <section id="teaching" aria-labelledby="teaching-title">
+        <div class="section-head"><span class="section-number" aria-hidden="true">04</span><h2 id="teaching-title">Teaching</h2></div>
+        <div class="teaching">
+          <article><div class="date">Fall 2025</div><h3>Basic Number Theory</h3><p>Teaching Assistant · SUSTech</p></article>
+          <article><div class="date">Fall 2024</div><h3>Linear Algebra</h3><p>Teaching Assistant · SUSTech</p></article>
+        </div>
+      </section>
+      <section id="activities" aria-labelledby="activities-title">
+        <div class="section-head"><span class="section-number" aria-hidden="true">05</span><h2 id="activities-title">Academic activities</h2></div>
+        <ul class="activity-list">
+          <li><div class="date">Nov. 2025</div><div><h3>Southeastern Algebraic Geometry Symposium IX</h3><p>Shenzhen, China</p></div></li>
+          <li><div class="date">Sep. 2025</div><div><h3>Autumn School on Topos</h3><p>Wuhan University · Wuhan, China</p></div></li>
+          <li><div class="date">Jul.–Aug. 2025</div><div><h3>Joint AMSS–PKU Algebra and Number Theory Summer School</h3><p>Beijing, China</p></div></li>
+          <li><div class="date">May 2025</div><div><h3>SUSTech Conference on Algebraic Groups and Arithmetic Geometry</h3><p>Shenzhen, China</p></div></li>
+          <li><div class="date">Mar. 2025</div><div><h3>Diophantine Days 2025</h3><p>Westlake University · Hangzhou, China</p></div></li>
+        </ul>
+        <details><summary>Earlier activities, 2023–2024</summary><ul class="activity-list">
+          <li><div class="date">Nov. 2024</div><div><h3>Introduction to Abelian Varieties</h3><p>Xiamen University · Course given by Qing Liu</p></div></li>
+          <li><div class="date">Aug. 2024</div><div><h3>SUSTech Conference of Number Theory and Arithmetic Geometry</h3><p>Shenzhen, China</p></div></li>
+          <li><div class="date">Jul.–Aug. 2024</div><div><h3>Joint AMSS–PKU Algebra and Number Theory Summer School</h3><p>Beijing, China</p></div></li>
+          <li><div class="date">Jun. 2023</div><div><h3>Mordell–Weil Theorem</h3><p>Xiamen University · Course given by Qing Liu</p></div></li>
+        </ul></details>
+      </section>
+      <section id="awards" aria-labelledby="awards-title">
+        <div class="section-head"><span class="section-number" aria-hidden="true">06</span><h2 id="awards-title">Selected awards &amp; beyond mathematics</h2></div>
+        <ul class="awards">
+          <li><span class="date">2025</span><span>Outstanding Academic Scholarship · SUSTech</span></li>
+          <li><span class="date">2024</span><span>Excellent Graduate of Sichuan Province · SWJTU</span></li>
+        </ul>
+        <div class="beyond"><p>I work with Python, C++, MATLAB, Mathematica, and LaTeX. Outside mathematics, I enjoy running, city walks, films, and photography.</p></div>
+      </section>
+      <div id="contact" class="contact-panel" role="region" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>For academic correspondence:</p>
+        <a href="mailto:12432029@mail.sustech.edu.cn">12432029@mail.sustech.edu.cn</a>
+      </div>
+      <footer><p>© 2026 Jie Wei</p><p>Updated October 2026</p></footer>
+    </main>
+  </div>
+</body>
+</html>
